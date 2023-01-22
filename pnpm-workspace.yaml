@@ -1,0 +1,3 @@
+packages:
+  # 公共组件
+  - "common-monorepo/**"

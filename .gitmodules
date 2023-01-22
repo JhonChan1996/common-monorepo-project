@@ -1,0 +1,3 @@
+[submodule "common-monorepo"]
+	path = common-monorepo
+	url = https://github.com/JhonChan1996/common-monorepo.git
