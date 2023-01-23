@@ -2,34 +2,69 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+# 开始
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- git add submodule https://github.com/JhonChan1996/common-monorepo
+- npm install | yarn | pnpm install
 
-## Customize configuration
+## 全局依赖
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```
+npm install commitizen -g
 ```
 
-### Compile and Hot-Reload for Development
+## 添加子模块
 
-```sh
-npm run dev
+```
+git submodule add <url> <repo_name>
 ```
 
-### Compile and Minify for Production
+## 首次拉取子模块
 
-```sh
-npm run build
+```
+git submodule update --init --recursive
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## 更新子模块
 
-```sh
-npm run lint
+```
+更新项目内子模块到最新版本
+git submodule update --remote
+更新子模块为远程项目的最新版本
+git submodule update --remote
+更新某一个子模块为远程项目的最新版本
+git submodule update --remote apps/monorepo-apps-demo1
+```
+
+更新完成之后，主模块需要执行 git submodule update
+
+## 删除子模块
+
+> rm -rf 子模块目录
+
+```
+git rm --cached modulePath
+rm -rf modulePath
+```
+
+> 删除 .gitmodules 文件中相关子模块的信息
+
+```
+[submodule "moduleName"]
+        path = moduleName
+        url = https://github.com/xxx/moduleName.git
+```
+
+> 删除 .git/config 中相关子模块信息
+
+```
+[submodule "moduleName"]
+        url = https://github.com/xxx/moduleName.git
+        active = true
+```
+
+> 删除 .git 文件夹中的相关子模块文件
+
+```
+rm -rf .git/modules/moduleName
 ```
