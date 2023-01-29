@@ -36,8 +36,6 @@ git submodule update --remote
 git submodule update --remote apps/monorepo-apps-demo1
 ```
 
-更新完成之后，主模块需要执行 git submodule update
-
 ## 删除子模块
 
 > rm -rf 子模块目录
@@ -68,3 +66,8 @@ rm -rf modulePath
 ```
 rm -rf .git/modules/moduleName
 ```
+
+## 下载子模块依赖
+
+- 进入子模块根目录
+- pnpm i

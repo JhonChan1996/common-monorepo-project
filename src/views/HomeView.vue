@@ -1,5 +1,5 @@
 <script setup>
-import cButton from '@common/components/cButton';
+import { cButton } from '@common/components';
 </script>
 
 <template>
