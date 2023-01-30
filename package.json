@@ -10,12 +10,14 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "submodule": "git submodule update --remote"
+    "submodule": "git submodule update --remote",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@common/components": "workspace:*",
     "@common/utils": "workspace:*",
     "ant-design-vue": "^3.2.15",
+    "only-allow": "^1.1.1",
     "pinia": "^2.0.29",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
