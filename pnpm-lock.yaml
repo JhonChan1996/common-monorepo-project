@@ -65,8 +65,10 @@ importers:
       fast-glob: ^3.2.12
       husky: ^8.0.3
       lint-staged: ^13.1.0
+      only-allow: ^1.1.1
     dependencies:
       '@common/utils': link:utils
+      only-allow: registry.npmmirror.com/only-allow/1.1.1
     devDependencies:
       '@commitlint/cli': registry.npmmirror.com/@commitlint/cli/17.4.2
       '@commitlint/config-conventional': registry.npmmirror.com/@commitlint/config-conventional/17.4.2
